@@ -1,45 +1,99 @@
 package jm.task.core.jdbc;
 
 
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
-
+import jm.task.core.jdbc.service.UserService;
+import jm.task.core.jdbc.service.UserServiceImpl;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        UserDaoJDBCImpl conectBase = new UserDaoJDBCImpl();
 
 
-       //  conectBase.createUsersTable();
+        UserDaoHibernateImpl conectBase = new  UserDaoHibernateImpl();
+      //  conectBase.createUsersTable();
+      //  conectBase.dropUsersTable();
 
-       /*conectBase.saveUser("Alex1","Davidov1", (byte) 21);
-        conectBase.saveUser("Alex2","Davidov2", (byte) 22);
-        conectBase.saveUser("Alex3","Davidov3", (byte) 23);
-        conectBase.saveUser("Alex4","Davidov4", (byte) 24);
-        conectBase.saveUser("Alex5","Davidov5", (byte) 25);
-        conectBase.saveUser("Alex6","Davidov6", (byte) 26);
-        conectBase.saveUser("Alex7","Davidov7", (byte) 27);
-        conectBase.saveUser("Alex8","Davidov8", (byte) 28);*/
+   /*   conectBase.saveUser("Alex","Ivanov", (byte) 18);
+        conectBase.saveUser("Charli","Petrov", (byte) 19);
+        conectBase.saveUser("Ignat","Plesov", (byte) 20);
+        conectBase.saveUser("Robert","Deniro", (byte) 21);
+        conectBase.saveUser("Mark","Kirov", (byte) 22);
+        conectBase.saveUser("Andi","Brashlovski", (byte) 23);
+        conectBase.saveUser("Bod","Marli", (byte) 24);
+        conectBase.saveUser("Nik","Volkov", (byte) 25);
+        conectBase.saveUser("Sem","Sirious", (byte) 26);
+        conectBase.saveUser("Big","Bosse", (byte) 27);
+        conectBase.saveUser("Timofey","Sergeev", (byte) 28);
+        conectBase.saveUser("Vilaliy","Nalimov", (byte) 29);
+*/
+      //  conectBase.removeUserById(1L);
+     //   conectBase.removeUserById(2L);
 
-        // conectBase.removeUserById(5L);
+   //     List<User> listUser = conectBase.getAllUsers();
 
-        /*List <User> listUser = conectBase.getAllUsers();
-       for(int i = 0; i< listUser.size(); i++) {
-           System.out.println(listUser.get(i).getId() + " " + listUser.get(i).getName() + " " + listUser.get(i).getLastName() + " " + listUser.get(i).getAge());
-       }*/
-
-
-        //conectBase.cleanUsersTable();
-        // conectBase.dropUsersTable();
-
-
-
-
-
-
+      /*  for(int i = 0; i< listUser.size(); i++) {
+            System.out.println(listUser.get(i));
+        }
+*/
+    //   conectBase.cleanUsersTable();
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             //JDBC
+        /*UserDaoJDBCImpl conectBase = new UserDaoJDBCImpl();
+        conectBase.createUsersTable();
+
+        conectBase.saveUser("Alex","Ivanov", (byte) 18);
+        conectBase.saveUser("Charli","Petrov", (byte) 19);
+        conectBase.saveUser("Ignat","Plesov", (byte) 20);
+        conectBase.saveUser("Robert","Deniro", (byte) 21);
+        conectBase.saveUser("Mark","Kirov", (byte) 22);
+        conectBase.saveUser("Andi","Brashlovski", (byte) 23);
+        conectBase.saveUser("Bod","Marli", (byte) 24);
+        conectBase.saveUser("Nik","Volkov", (byte) 25);
+        conectBase.saveUser("Sem","Sirious", (byte) 26);
+        conectBase.saveUser("Big","Bosse", (byte) 27);
+        conectBase.saveUser("Timofey","Sergeev", (byte) 28);
+        conectBase.saveUser("Vilaliy","Nalimov", (byte) 29);
+
+        conectBase.removeUserById(5L);
+
+        List <User> listUser = conectBase.getAllUsers();
+       for(int i = 0; i< listUser.size(); i++) {
+           System.out.println(listUser.get(i).getId() + " " + listUser.get(i).getName() + " " + listUser.get(i).getLastName() + " " + listUser.get(i).getAge());
+       }
+
+       conectBase.cleanUsersTable();
+       conectBase.dropUsersTable();*/

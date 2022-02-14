@@ -12,11 +12,11 @@ public class UserDaoJDBCImpl implements UserDao {
     public UserDaoJDBCImpl(){
     }
 
-    Util util = new Util();
-    private static String nameTable= "TableOfUser";
+   // Util util = new Util();
+   // private static String nameTable= "TableOfUser";
 
     public void createUsersTable() /*throws SQLException*/ {
-        try {
+       /* try {
             util.conection().createStatement().executeUpdate("CREATE TABLE "+nameTable+" (`id` INT(5) NOT NULL AUTO_INCREMENT, PRIMARY KEY (`id`) , name VARCHAR(20), lastName VARCHAR(20), age INT(2))");
             System.out.println("Создана таблица с полями: #id, #name, #lastName, #age");
         } catch (SQLException e) {
@@ -27,11 +27,11 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("conection.close - exeption");
             e.printStackTrace();
-        }
+        }*/
     }
 
     public void dropUsersTable() {
-        try {
+       /* try {
             util.conection().createStatement().executeUpdate("DROP TABLE "+nameTable+";");
             System.out.println("Таблица #TableOfUser - удалена.");
         } catch (SQLException e) {
@@ -42,11 +42,11 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("conection.close - exeption");
             e.printStackTrace();
-        }
+        }*/
     }
 
     public void saveUser(String name, String lastName, byte age) {
-        try {
+        /*try {
             util.conection().createStatement().executeUpdate("insert into "+nameTable+" (id, name, lastName, age) values (id, '"+name+"', '"+lastName+"', '"+age+"')");
             System.out.println("Юзер: "+name+" "+lastName+" "+age+" добавлен");
         } catch (SQLException e) {
@@ -57,11 +57,11 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("conection.close - exeption");
             e.printStackTrace();
-        }
+        }*/
     }
 
     public void removeUserById(long id) {
-        try {
+        /*try {
             util.conection().createStatement().executeUpdate("delete from "+nameTable+" where id="+id+"");
            System.out.println("Юзер с ID "+id+" удален");
         } catch (SQLException e) {
@@ -72,12 +72,11 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("conection.close - exeption");
             e.printStackTrace();
-        }
+        }*/
     }
 
     public List<User> getAllUsers() {
-        ArrayList <User> arrUser = new ArrayList<>();
-
+        /*ArrayList <User> arrUser = new ArrayList<>();
         try {
             ResultSet resultSet = util.conection().createStatement().executeQuery("SELECT * FROM "+nameTable+"");
             while (resultSet.next()){
@@ -98,11 +97,12 @@ public class UserDaoJDBCImpl implements UserDao {
             System.out.println("conection.close - exeption");
             e.printStackTrace();
         }
-        return arrUser;
+        return arrUser;*/
+        return null;
     }
 
     public void cleanUsersTable() {
-        try {
+      /* try {
             util.conection().createStatement().executeUpdate("TRUNCATE TABLE "+nameTable+";");
             System.out.println("Таблица #TableOfUser - очищена.");
         } catch (SQLException e) {
@@ -113,6 +113,6 @@ public class UserDaoJDBCImpl implements UserDao {
         } catch (SQLException e) {
             System.out.println("conection.close - exeption");
             e.printStackTrace();
-        }
+        }*/
     }
 }
